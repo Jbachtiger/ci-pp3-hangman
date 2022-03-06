@@ -35,4 +35,11 @@ def validate_player_name(name):
 
     return True
 
-player_name()
+def main():
+    """
+    Run all game functions
+    """
+    player_name()
+
+
+main()

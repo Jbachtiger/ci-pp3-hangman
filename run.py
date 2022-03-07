@@ -1,9 +1,9 @@
-"""
-Imports section
-"""
 # Import statements I created for the game
 from words import easy_words
 from words import hard_words
+
+#External imports
+import random 
 
 # Welcome message
 print("Welcome to Hangman. Test your word knowledge and see if you can avoid the noose! Guess the word and win.\n")
@@ -37,7 +37,7 @@ def validate_player_name(name):
 
 def menu():
     """
-    Main menu for game.
+    Main menu for game
     """
     print("Main Menu: ")
     print("[1] Start Game")
@@ -47,7 +47,7 @@ def menu():
     while True:
         player_option = int(input("Please enter your option from the above menu: "))
         if player_option == 1:
-            print("option 1 - dummy text")
+            select_word()
         elif player_option == 2:
             print("option 2 - dummy text")
         elif player_option == 0:
@@ -55,12 +55,24 @@ def menu():
         else:
             print("Invalid option. Please choose a valid option from menu")
 
+def select_word():
+    while True:
+        difficulty = int(input("Enter 1 for easy and 2 for hard: "))
+
+        if difficulty == 1:
+            word = random.choice(easy_words)
+        elif difficulty == 2:
+            word = random.choice(hard_words)
+        else:
+            print("Invalid option. Please select your difficulty.")
+
 def main():
     """
     Run all game functions
     """
     player_name()
     menu()
+    select_word()
 
 
 main()

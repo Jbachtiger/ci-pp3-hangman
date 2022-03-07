@@ -49,13 +49,16 @@ def menu():
         if player_option == 1:
             select_word()
         elif player_option == 2:
-            print("option 2 - dummy text")
+            instructions()
         elif player_option == 0:
             print("Thank you for playing, game exited")
         else:
             print("Invalid option. Please choose a valid option from menu")
 
 def select_word():
+    """
+    Select a random word from either the easy or hard list dependinng on player input
+    """
     while True:
         difficulty = int(input("Enter 1 for easy and 2 for hard: "))
 
@@ -65,6 +68,30 @@ def select_word():
             word = random.choice(hard_words)
         else:
             print("Invalid option. Please select your difficulty.")
+
+def instructions():
+    """
+    Hangman game instructions
+    """
+    print("How to play:\n")
+    print("1. The aim of the game is to correctly guess the secret word.\n")
+    print("2. You will have 7 lives so you need to guess the correct word in this time.\n")
+    print("3. To guess the word, type in the letter you wish to guess and hit enter.\n")
+    print("4. If you've chosen correctly, then your letter will appear on the screen.\n")
+    print("5. If you are wrong then the Hangman will start to appear.\n")
+    print("6. The more incorrect guess, the more partd of the Hangman will appear until its GAMEOVER.\n")
+
+    """
+    Option to return to main menu
+    """
+    while True:
+        back = int(input("Enter 0 to return to main menu: "))
+        if back == 0:
+            menu()
+            
+             
+        else:
+            print("Invalid option. Please enter 0 to return to menu.")
 
 def main():
     """

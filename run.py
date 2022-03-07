@@ -2,20 +2,21 @@
 from words import easy_words
 from words import hard_words
 
-#External imports
+# External imports
 import random
-import os 
+import os
+import sys
 
 # Welcome message
 print("Welcome to Hangman. Test your word knowledge and see if you can avoid the noose! Guess the word and win.\n")
 
-def clearConsole():
+def clear_console():
     """
     Clears the terminal
     Credit - clear console code used from https://www.delftstack.com/howto/python/python-clear-console/ 
     """
     command = 'clear'
-    if os.name in ('nt', 'dos'):  
+    if os.name in ('nt', 'dos'):
         command = 'cls'
     os.system(command)
 
@@ -23,7 +24,7 @@ def player_name():
     """
     Allows the user to input their name
     """
-    while True:     
+    while True:
         player_data = input("Enter your name: ")
 
         if validate_player_name(player_data):
@@ -62,13 +63,16 @@ def menu():
         elif player_option == 2:
             instructions()
         elif player_option == 0:
-            print("Thank you for playing, game exited")
+            print("Thanks for playing, game exited.")
+            print("If you'd like to start over, please press the run program button.")
+            sys.exit(0)
         else:
             print("Invalid option. Please choose a valid option from menu")
 
 def select_word():
     """
-    Select a random word from either the easy or hard list dependinng on player input
+    Select a random word from either the easy 
+    or hard list dependinng on player input
     """
     while True:
         difficulty = int(input("Enter 1 for easy and 2 for hard: "))
@@ -92,16 +96,12 @@ def instructions():
     print("5. If you are wrong then the Hangman will start to appear.\n")
     print("6. The more incorrect guess, the more partd of the Hangman will appear until its GAMEOVER.\n")
 
-    """
-    Option to return to main menu
-    """
+# Option to return to main menu
     while True:
         back = int(input("Enter 0 to return to main menu: "))
         if back == 0:
-            clearConsole()
+            clear_console()
             menu()
-            
-
         else:
             print("Invalid option. Please enter 0 to return to menu.")
 

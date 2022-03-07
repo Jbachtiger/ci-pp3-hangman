@@ -3,16 +3,27 @@ from words import easy_words
 from words import hard_words
 
 #External imports
-import random 
+import random
+import os 
 
 # Welcome message
 print("Welcome to Hangman. Test your word knowledge and see if you can avoid the noose! Guess the word and win.\n")
 
-def player_name(): 
+def clearConsole():
+    """
+    Clears the terminal
+    Credit - clear console code used from https://www.delftstack.com/howto/python/python-clear-console/ 
+    """
+    command = 'clear'
+    if os.name in ('nt', 'dos'):  
+        command = 'cls'
+    os.system(command)
+
+def player_name():
     """
     Allows the user to input their name
     """
-    while True:        
+    while True:     
         player_data = input("Enter your name: ")
 
         if validate_player_name(player_data):
@@ -87,9 +98,10 @@ def instructions():
     while True:
         back = int(input("Enter 0 to return to main menu: "))
         if back == 0:
+            clearConsole()
             menu()
             
-             
+
         else:
             print("Invalid option. Please enter 0 to return to menu.")
 

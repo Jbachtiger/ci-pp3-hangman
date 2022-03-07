@@ -35,11 +35,32 @@ def validate_player_name(name):
 
     return True
 
+def menu():
+    """
+    Main menu for game.
+    """
+    print("Main Menu: ")
+    print("[1] Start Game")
+    print("[2] Instructions")
+    print("[0] Exit the game")
+
+    while True:
+        player_option = int(input("Please enter your option from the above menu: "))
+        if player_option == 1:
+            print("option 1 - dummy text")
+        elif player_option == 2:
+            print("option 2 - dummy text")
+        elif player_option == 0:
+            print("Thank you for playing, game exited")
+        else:
+            print("Invalid option. Please choose a valid option from menu")
+
 def main():
     """
     Run all game functions
     """
     player_name()
+    menu()
 
 
 main()

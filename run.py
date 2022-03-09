@@ -29,7 +29,7 @@ def player_name():
     Allows the user to input their name
     """
     while True:
-        player_data = input("Enter your name: ")
+        player_data = input("Enter your name: \n")
 
         if validate_player_name(player_data):
             print(f"Welcome to Hangman {player_data} \n")
@@ -63,7 +63,7 @@ def menu():
     print("[0] Exit the game")
 
     while True:
-        player_option = input("Please enter your option from the above menu: ")
+        player_option = input("Please enter your option from menu: \n")
         if player_option == "1":
             select_word()
         elif player_option == "2":
@@ -82,7 +82,7 @@ def select_word():
     or hard list dependinng on player input
     """
     while True:
-        difficulty = input("Enter 1 for easy and 2 for hard: ")
+        difficulty = input("Enter 1 for easy and 2 for hard: \n")
 
         if difficulty == "1":
             word = random.choice(easy_words)
@@ -105,12 +105,12 @@ def instructions():
     print("4. Correct letters will appear in the secret word.\n")
     print("5. If you are wrong then the Hangman will start to appear.\n")
     print("6. Incorrect guesses make a different part of the hangman show.\n")
-    print("7. Once the full hangman appears it's GAMEOVER!")
+    print("7. Once the full hangman appears it's GAMEOVER!\n")
 
 # Option to return to main menu
     while True:
-        back = int(input("Enter 0 to return to main menu: "))
-        if back == 0:
+        back = input("Enter 0 to return to main menu: \n")
+        if back == "0":
             clear_console()
             menu()
         else:
@@ -139,13 +139,13 @@ def game(word):
         print("Correctly guessed letters: ", current_guess)
 
 #  Allows player to enter letter guess
-        guess = input("Enter your letter guess: ").upper()
+        guess = input("Enter your letter guess: \n").upper()
         clear_console()
 
 #  Checks to see if the letter has already been used
         while guess in used_letters:
             print("You have already used this letter", guess)
-            guess = input("Enter your letter guess: ").upper()
+            guess = input("Enter your letter guess: \n").upper()
 
 # add guessed letter to used_letters list
         used_letters.append(guess)
@@ -185,7 +185,7 @@ def play_again():
     Gives player choice to play again or exit to the menu.
     """
     while True:
-        restart = input("Play again? Enter 1 for Yes or 2 for No: ")
+        restart = input("Play again? Enter 1 for Yes or 2 for No: \n")
 
         if restart == "1":
             select_word()

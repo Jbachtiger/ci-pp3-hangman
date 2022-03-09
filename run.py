@@ -119,6 +119,14 @@ def game(word):
     max_wrong = len(hangman_pics) - 1
     attempts = 6
 
+#  Loop allowing player to guess the correct word on last chance
+#  Exit loop if correct word has been guessed
+    while wrong_guesses < max_wrong and current_guess != word:
+        print(hangman_pics[wrong_guesses])
+        print("Attempts left: ", attempts)
+        print("Used letters: ", used_letters)
+        print("Correctly guessed letters: ", current_guess)
+
 
 
 def main():

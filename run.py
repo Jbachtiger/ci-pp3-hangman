@@ -130,15 +130,13 @@ def game(word):
         print("Correctly guessed letters: ", current_guess)
 
 #  Allows player to enter letter guess
-        guess = input("Enter your letter guess: ")
-        guess = guess.upper()
+        guess = input("Enter your letter guess: ").upper()
         clear_console()
 
 #  Checks to see if the letter has already been used
         while guess in used_letters:
             print("You have already used this letter", guess)
-            guess = input("Enter your letter guess: ")
-            guess = guess.upper()
+            guess = input("Enter your letter guess: ").upper()
 
 # add guessed letter to used_letters list
         used_letters.append(guess)

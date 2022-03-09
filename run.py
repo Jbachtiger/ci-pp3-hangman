@@ -1,6 +1,7 @@
 # Import statements I created for the game
 from words import easy_words
 from words import hard_words
+from hangman_art import hangman_pics
 
 # External imports
 import random
@@ -104,6 +105,9 @@ def instructions():
             menu()
         else:
             print("Invalid option. Please enter 0 to return to menu.")
+
+
+
 
 def main():
     """

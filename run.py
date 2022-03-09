@@ -134,6 +134,12 @@ def game(word):
         guess = guess.upper()
         clear_console()
 
+#  Checks to see if the letter has already been used
+        while guess in used_letters:
+            print("You have already used this letter", guess)
+            guess = input("Enter your letter guess: ")
+            guess = guess.upper()
+
 # add guessed letter to used_letters list
         used_letters.append(guess)
 
@@ -165,8 +171,6 @@ def game(word):
         print("The correct word is", word)
     else:
         print("You have won!")
-
-
 
 def main():
     """

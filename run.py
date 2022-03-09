@@ -106,6 +106,18 @@ def instructions():
         else:
             print("Invalid option. Please enter 0 to return to menu.")
 
+def game(word):
+    """
+    Main game function
+    Credit - MJ Codes -  base code logic for function
+    amended from his YouTube tutorial, code has been modified
+    and extra features/components added to it
+    """
+    used_letters = []  # keeps track of what letters the player has used
+    wrong_guesses = 0  # keeps track of wrong guesses
+    current_guess = "-" * len(word)  # creates dashes for each letter in word
+    max_wrong = len(hangman_pics) - 1
+    attempts = 6
 
 
 

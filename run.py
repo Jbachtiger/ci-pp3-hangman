@@ -139,6 +139,22 @@ def game(word):
         if guess in word:
             print("That's a correct letter!")
 
+#  Updates secret word revealing correct letters
+#  Adds these to a new word with mixed dashes and letters
+            new_current_guess = ""
+            for letter in range(len(word)):
+                if guess == word[letter]:
+                    new_current_guess += guess
+                else:
+                    new_current_guess += current_guess[letter]
+        
+            current_guess = new_current_guess
+ 
+        else:
+            print("Incorrect letter")
+            wrong_guesses += 1  # increases number incorrect by 1
+            attempts -= 1  # decreases number of lives by 1
+
 
 
 def main():

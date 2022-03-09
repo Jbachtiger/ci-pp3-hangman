@@ -58,12 +58,12 @@ def menu():
     print("[0] Exit the game")
 
     while True:
-        player_option = int(input("Please enter your option from the above menu: "))
-        if player_option == 1:
+        player_option = input("Please enter your option from the above menu: ")
+        if player_option == "1":
             select_word()
-        elif player_option == 2:
+        elif player_option == "2":
             instructions()
-        elif player_option == 0:
+        elif player_option == "0":
             print("Thanks for playing, game exited.")
             print("If you'd like to start over, please press the run program button.")
             sys.exit(0)
@@ -76,12 +76,12 @@ def select_word():
     or hard list dependinng on player input
     """
     while True:
-        difficulty = int(input("Enter 1 for easy and 2 for hard: "))
+        difficulty = input("Enter 1 for easy and 2 for hard: ")
 
-        if difficulty == 1:
+        if difficulty == "1":
             word = random.choice(easy_words)
             game(word)
-        elif difficulty == 2:
+        elif difficulty == "2":
             word = random.choice(hard_words)
             game(word)
         else:

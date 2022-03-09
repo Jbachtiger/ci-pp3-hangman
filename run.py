@@ -161,14 +161,30 @@ def game(word):
             wrong_guesses += 1  # increases number incorrect by 1
             attempts -= 1  # decreases number of lives by 1
 
-#  No more guesses left   
+#  No more guesses left 
     if wrong_guesses == max_wrong:
         print(hangman_pics[wrong_guesses])
         print("Attempts left", attempts)
         print("You've been hanged")
         print("The correct word is", word)
+        play_again()
     else:
         print("You have won!")
+        play_again()
+
+def play_again():
+    """
+    Gives player choice to play again or exit to the menu.
+    """
+    while True:
+        restart = input("Play again? Enter 1 for Yes or 2 for No: ")
+
+        if restart == "1":
+            select_word()
+        elif restart == "2":
+            menu()
+        else:
+            print("Invalid input.")
 
 def main():
     """

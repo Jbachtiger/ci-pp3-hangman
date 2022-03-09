@@ -9,17 +9,20 @@ import os
 import sys
 
 # Welcome message
-print("Welcome to Hangman. Test your word knowledge and see if you can avoid the noose! Guess the word and win.\n")
+print("Welcome to Hangman. Avoid the noose by guessing the word and win.\n")
+
 
 def clear_console():
     """
     Clears the terminal
-    Credit - clear console code used from https://www.delftstack.com/howto/python/python-clear-console/ 
+    Credit - clear console code used from
+    https://www.delftstack.com/howto/python/python-clear-console/
     """
     command = 'clear'
     if os.name in ('nt', 'dos'):
         command = 'cls'
     os.system(command)
+
 
 def player_name():
     """
@@ -32,21 +35,23 @@ def player_name():
             print(f"Welcome to Hangman {player_data} \n")
             break
 
+
 def validate_player_name(name):
     """
     Validate player name input so it cannot be left blank
     """
     try:
         if name == "":
-            raise ValueError("invalid input. Please type your name e.g. John \n")
+            raise ValueError("Please type your name e.g. John \n")
         elif len(name) == 0:
-            raise ValueError("invalid input. Please type your name e.g. John \n")
+            raise ValueError("Please type your name e.g. John \n")
 
     except ValueError as error:
-        print(f"Try again, {error}")
+        print(f"Try again, invalid input. {error}")
         return False
 
     return True
+
 
 def menu():
     """
@@ -65,14 +70,15 @@ def menu():
             instructions()
         elif player_option == "0":
             print("Thanks for playing, game exited.")
-            print("If you'd like to start over, please press the run program button.")
+            print("To start over press the run program button.")
             sys.exit(0)
         else:
             print("Invalid option. Please choose a valid option from menu")
 
+
 def select_word():
     """
-    Select a random word from either the easy 
+    Select a random word from either the easy
     or hard list dependinng on player input
     """
     while True:
@@ -87,17 +93,19 @@ def select_word():
         else:
             print("Invalid option. Please select your difficulty.")
 
+
 def instructions():
     """
     Hangman game instructions
     """
     print("How to play:\n")
     print("1. The aim of the game is to correctly guess the secret word.\n")
-    print("2. You will have 7 lives so you need to guess the correct word in this time.\n")
-    print("3. To guess the word, type in the letter you wish to guess and hit enter.\n")
-    print("4. If you've chosen correctly, then your letter will appear on the screen.\n")
+    print("2. You have 6 chances to guess the correct word.\n")
+    print("3. To guess a letter, type in the letter and hit enter.\n")
+    print("4. Correct letters will appear in the secret word.\n")
     print("5. If you are wrong then the Hangman will start to appear.\n")
-    print("6. The more incorrect guess, the more partd of the Hangman will appear until its GAMEOVER.\n")
+    print("6. Incorrect guesses make a different part of the hangman show.\n")
+    print("7. Once the full hangman appears it's GAMEOVER!")
 
 # Option to return to main menu
     while True:
@@ -107,6 +115,7 @@ def instructions():
             menu()
         else:
             print("Invalid option. Please enter 0 to return to menu.")
+
 
 def game(word):
     """
@@ -153,15 +162,13 @@ def game(word):
                     new_current_guess += guess
                 else:
                     new_current_guess += current_guess[letter]
-        
             current_guess = new_current_guess
- 
         else:
             print("Incorrect letter")
             wrong_guesses += 1  # increases number incorrect by 1
             attempts -= 1  # decreases number of lives by 1
 
-#  No more guesses left 
+#  No more guesses left
     if wrong_guesses == max_wrong:
         print(hangman_pics[wrong_guesses])
         print("Attempts left", attempts)
@@ -171,6 +178,7 @@ def game(word):
     else:
         print("You have won!")
         play_again()
+
 
 def play_again():
     """
@@ -185,6 +193,7 @@ def play_again():
             menu()
         else:
             print("Invalid input.")
+
 
 def main():
     """

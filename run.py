@@ -127,6 +127,14 @@ def game(word):
         print("Used letters: ", used_letters)
         print("Correctly guessed letters: ", current_guess)
 
+#  Allows user to enter letter guess
+        guess = input("Enter your letter guess: ")
+        guess = guess.upper()
+        clear_console()
+
+# add guessed letter to used_letters list
+        used_letters.append(guess)
+
 
 
 def main():

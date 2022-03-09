@@ -80,8 +80,10 @@ def select_word():
 
         if difficulty == 1:
             word = random.choice(easy_words)
+            game(word)
         elif difficulty == 2:
             word = random.choice(hard_words)
+            game(word)
         else:
             print("Invalid option. Please select your difficulty.")
 
@@ -155,6 +157,15 @@ def game(word):
             wrong_guesses += 1  # increases number incorrect by 1
             attempts -= 1  # decreases number of lives by 1
 
+#  No more guesses left   
+    if wrong_guesses == max_wrong:
+        print(hangman_pics[wrong_guesses])
+        print("Attempts left", attempts)
+        print("You've been hanged")
+        print("The correct word is", word)
+    else:
+        print("You have won!")
+
 
 
 def main():
@@ -164,6 +175,7 @@ def main():
     player_name()
     menu()
     select_word()
+    game()
 
 
 main()

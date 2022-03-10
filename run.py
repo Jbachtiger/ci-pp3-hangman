@@ -1,6 +1,6 @@
 # Import statements I created for the game
 from words import easy_words, hard_words
-from hangman_art import hangman_pics
+from hangman_art import hangman_pics, hangman_logo
 
 # External imports
 import random
@@ -213,7 +213,7 @@ def main():
     """
     Run all game functions
     """
-    print("Avoid the noose by guessing the word and win.\n")  # Welcome message
+    print(hangman_logo[0])  # Welcome message
     take_player_name_input()
     show_menu()
 

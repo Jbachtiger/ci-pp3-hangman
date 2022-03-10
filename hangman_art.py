@@ -60,5 +60,12 @@ hangman_logo = ["""
                                                             |___|                 
 
                   AVOID THE NOOSE BY GUESSING THE WORD AND WIN!
-                                                                                                                                                                                                
+
+                                 +---+
+                                 |   |
+                                 O   |
+                                /|\  |
+                                / \  |
+                                     |
+                               =========                                                                                                                                                                                        
 """]

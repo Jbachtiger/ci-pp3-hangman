@@ -61,9 +61,9 @@ def show_menu():
     while True:
         player_option = input("Please enter your option from menu: \n")
         if player_option == "1":
-            select_random_word()
+            return start_game()
         elif player_option == "2":
-            instructions()
+            return instructions()
         elif player_option == "0":
             print("Thanks for playing, game exited.")
             print("To start over press the run program button.")
@@ -81,11 +81,9 @@ def select_random_word():
         difficulty = input("Enter 1 for easy and 2 for hard: \n")
 
         if difficulty == "1":
-            word = random.choice(easy_words)
-            start_game(word)
+            return random.choice(easy_words)
         elif difficulty == "2":
-            word = random.choice(hard_words)
-            start_game(word)
+            return random.choice(hard_words)
         else:
             print("Invalid option. Please select your difficulty.")
 
@@ -127,17 +125,23 @@ def take_guess_input():
     return guess
 
 
-def start_game(word):
+def start_game():
     """
     Main game function
     Credit - MJ Codes -  base code logic for function
     amended from his YouTube tutorial, code has been modified
     and extra features/components added to it
     """
-    used_letters = []  # keeps track of what letters the player has used
-    wrong_guesses = 0  # keeps track of wrong guesses
-    current_guess = "-" * len(word)  # creates dashes for each letter in word
-    max_wrong_attempts_allowed = len(hangman_pics) - 1  # max attempts before full Hangman pic displays
+    #  selects random word
+    word = select_random_word()
+    # keeps track of what letters the player has used
+    used_letters = []
+    # keeps track of wrong guesses
+    wrong_guesses = 0
+    # creates dashes for each letter in word
+    current_guess = "-" * len(word)
+    # max attempts before full Hangman pic displays
+    max_wrong_attempts_allowed = len(hangman_pics) - 1
     lives = 6
 
 #  Loop allowing player to guess the correct word on last chance
@@ -145,11 +149,11 @@ def start_game(word):
     while wrong_guesses < max_wrong_attempts_allowed and current_guess != word:
         print(hangman_pics[wrong_guesses])
         print("Attempts left: ", lives)
-        print("Used letters: ", used_letters)
+        print("Used letters: ", ' '.join(used_letters))
         print("Correctly guessed letters: ", current_guess)
 
 #  Allows player to enter letter guess
-        guessed_letter = input("Enter your letter guess: \n").upper()
+        guessed_letter = take_guess_input()
         clear_console()
 
 #  Checks to see if the letter has already been used
@@ -198,7 +202,7 @@ def ask_to_play_again():
         restart = input("Play again? Enter 1 for Yes or 2 for No: \n")
 
         if restart == "1":
-            select_random_word()
+            start_game()
         elif restart == "2":
             show_menu()
         else:
@@ -209,12 +213,9 @@ def main():
     """
     Run all game functions
     """
-    
-    print("Welcome to Hangman. Avoid the noose by guessing the word and win.\n")  # Welcome message
+    print("Avoid the noose by guessing the word and win.\n")  # Welcome message
     take_player_name_input()
     show_menu()
-    select_random_word()
-    start_game()
 
 
 main()

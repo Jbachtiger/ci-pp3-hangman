@@ -80,7 +80,7 @@ def select_random_word():
     or hard list dependinng on player input
     """
     while True:
-        difficulty = input(Fore.CYAN + "Enter 1 for easy and 2 for hard: \n")
+        difficulty = input(Fore.CYAN + "Enter 1 for Easy and 2 for Hard: \n")
 
         if difficulty == "1":
             return random.choice(easy_words)

@@ -45,7 +45,7 @@ def validate_player_name(name):
             raise ValueError("Please type your name e.g. John \n")
 
     except ValueError as error:
-        print(Fore.RED + f"Try again, invalid input. {error}")
+        print(Fore.RED + f"Invalid input, try again. {error}")
         return False
 
     return True
@@ -61,7 +61,7 @@ def show_menu():
     print("[0] Exit the game")
 
     while True:
-        player_option = input("Please enter your option from menu: \n")
+        player_option = input(Fore.CYAN + "Enter option from menu: \n")
         if player_option == "1":
             return start_game()
         elif player_option == "2":
@@ -71,7 +71,7 @@ def show_menu():
             print("To start over press the run program button.")
             sys.exit(0)
         else:
-            print(Fore.RED + "Invalid option. Please choose a valid option from menu")
+            print(Fore.RED + "Invalid option.")
 
 
 def select_random_word():
@@ -110,7 +110,7 @@ def instructions():
             clear_console()
             show_menu()
         else:
-            print(Fore.RED + "Invalid option. Please enter 0 to return to menu.")
+            print(Fore.RED + "Invalid option. Enter 0 to return to menu.")
 
 
 def take_guess_input():
@@ -160,7 +160,7 @@ def start_game():
 
 #  Checks to see if the letter has already been used
         while guessed_letter in used_letters:
-            print(Fore.RED + "You have already used this letter", guessed_letter)
+            print(Fore.RED + "Letter has already been used", guessed_letter)
             guessed_letter = take_guess_input()
 
 # add guessed letter to used_letters list
@@ -187,7 +187,7 @@ def start_game():
 #  No more guesses left
     if wrong_guesses == max_wrong_attempts_allowed:
         print(hangman_pics[wrong_guesses])
-        print(Fore.GREEN + "Attempts left", lives)
+        print(Fore.GREEN + "Attempts left:", lives)
         print(Fore.RED + "You've been hanged")
         print(Fore.CYAN + "The correct word is", word)
         ask_to_play_again()
@@ -201,7 +201,8 @@ def ask_to_play_again():
     Gives player choice to play again or exit to the menu.
     """
     while True:
-        restart = input(Fore.CYAN + "Play again? Enter 1 for Yes or 2 for No: \n")
+        print(Fore.CYAN + "Want to play again?")
+        restart = input(Fore.CYAN + "Enter 1 for Yes or 2 for No: \n")
 
         if restart == "1":
             start_game()

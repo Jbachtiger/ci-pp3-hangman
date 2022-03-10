@@ -1,15 +1,11 @@
 # Import statements I created for the game
-from words import easy_words
-from words import hard_words
+from words import easy_words, hard_words
 from hangman_art import hangman_pics
 
 # External imports
 import random
 import os
 import sys
-
-# Welcome message
-print("Welcome to Hangman. Avoid the noose by guessing the word and win.\n")
 
 
 def clear_console():
@@ -24,7 +20,7 @@ def clear_console():
     os.system(command)
 
 
-def take_player_name():
+def take_player_name_input():
     """
     Allows the user to input their name
     """
@@ -117,6 +113,20 @@ def instructions():
             print("Invalid option. Please enter 0 to return to menu.")
 
 
+def take_guess_input():
+    """
+    Function that takes guess input and validates
+    to ensure only 1 letter is inputted at a time
+    If nothing is inputted an error message shows
+    """
+    guess = ''
+    while not guess.isalpha() and len(guess) != 1:
+        guess = input("Enter your letter guess: \n").upper()
+        if guess == '':
+            print("Enter a valid letter\n")
+    return guess
+
+
 def start_game(word):
     """
     Main game function
@@ -145,7 +155,7 @@ def start_game(word):
 #  Checks to see if the letter has already been used
         while guessed_letter in used_letters:
             print("You have already used this letter", guessed_letter)
-            guessed_letter = input("Enter your letter guess: \n").upper()
+            guessed_letter = take_guess_input()
 
 # add guessed letter to used_letters list
         used_letters.append(guessed_letter)
@@ -199,7 +209,9 @@ def main():
     """
     Run all game functions
     """
-    take_player_name()
+    
+    print("Welcome to Hangman. Avoid the noose by guessing the word and win.\n")  # Welcome message
+    take_player_name_input()
     show_menu()
     select_random_word()
     start_game()

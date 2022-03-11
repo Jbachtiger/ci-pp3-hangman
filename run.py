@@ -142,6 +142,7 @@ def start_game():
     current_guess = "-" * len(word)
     # max attempts before full Hangman pic displays
     max_wrong_attempts_allowed = len(hangman_pics) - 1
+    #  number of attempts shown in text format
     lives = 6
 
 #  Loop allowing player to guess the correct word on last chance

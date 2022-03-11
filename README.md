@@ -66,4 +66,14 @@ __First Time Visitor Goals__
  __Returning Visitors__
  - As a returning visitor I want to be able to play the game instantly
 
- 
+## Design
+### Colour Scheme
+- The colour scheme has been carefully chosen to ensure accessability for all
+- The colours compliment each other to ensure text is easily readable in the python terminal
+- The colours used provide a fun, colourful and engaging interface
+- The main colours used in the game are magenta, cyan, green and red.
+
+### Flowchart
+
+
+

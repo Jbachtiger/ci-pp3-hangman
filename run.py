@@ -41,8 +41,6 @@ def validate_player_name(name):
     try:
         if name == "":
             raise ValueError("Please type your name e.g. John \n")
-        elif len(name) == 0:
-            raise ValueError("Please type your name e.g. John \n")
 
     except ValueError as error:
         print(Fore.RED + f"Invalid input, try again. {error}")

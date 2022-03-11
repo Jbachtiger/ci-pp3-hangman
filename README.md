@@ -81,3 +81,31 @@ __First Time Visitor Goals__
 - Add a scoring system where players get points for each letter they get right, this would be achived by adding a score variable and incrementing the score each time a letter is correct
 - Create a leaderboard display for the players to display there high scores, this would be achieved by using a Google API to link to a Google Sheet where the player names and scores are stored
 
+## Technologies Used
+### Languages Used
+- [Python](https://www.python.org/)
+
+### Frameworks, Libaries and Programs Used
+
+- [Gitpod](https://gitpod.io/projects) - this was my code editor for this project
+- [Git](https://git-scm.com/) - was used for version control using the terminal through Gitpod to commit to Git and push to Github
+- [Github](https://github.com/) - is used to store the code for this project after being pushed from Git
+- [Techsini](http://techsini.com/multi-mockup/index.php) - was used to generate multi-device website mockups
+- [Fireshot](https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg?hl=en) - this was a Google chrome extension used to take screenshots
+- [PEP8 Online](http://pep8online.com/) - was used to validate python code to ensure no errors were present
+- [Heroku] - (https://www.heroku.com/) - this was the platform used to deploy the application
+- Python Packages: 
+  - [colorama](https://pypi.org/project/colorama/) >> This import allowed the terminal text to be printed in different colours
+
+  - [os](https://docs.python.org/3/library/os.html) >> The os library was imported to create a function using os.name and os.system to clear the terminal. This library import provided a better user experience ensuring the terminal was clear after each guess and on returning to main menu
+
+  - [random](https://docs.python.org/3/library/random.html?highlight=random#module-random) >> The random library was imported in order to access the functionality to generate a random word the from word.py file using the "random.choice()" method
+
+  - [sys](https://docs.python.org/3/library/sys.html?highlight=sys#module-sys) >> The sys library was imported to use the sys.exit method to allow the user to exit the game
+
+
+
+
+
+
+

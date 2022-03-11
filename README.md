@@ -38,3 +38,32 @@ Hangman is an interactive python terminal word guessing game. It's target audien
   - [Code](#code)
   - [Media](#media)
   - [Acknowledgments](#acknowledgments)
+
+## User Experience
+### User Stories
+__Project Goals__
+- To engage students and adults offering an interactive way to play a traditionally none digital game
+- Teach players new words
+- Improve players problem solving ability
+- To be fun and make players want to play again
+
+__Business Owner Goals__
+- As a site owner I want to create a fun and engaging game
+- As a site owner I want to easily to navigate my game and ensure it is user friendly
+- As a site owner I want to have a clear menu showing start game, instructions and exit
+- As a site owner I want it to be clear both visually and through text how many attempts/lives a player has left
+- As a site owner I want to there to be a choice of difficulty
+- As a site owner I want the words in the game to be generated at random
+- As a site owner I want consistent feedback to be provided if a user inputs invalid data
+- As a site owner I want to allow the player to have an option to continue playing after each game has been finished
+
+__First Time Visitor Goals__
+- As a first time visitor I want to be able to find out what type of game it is
+- As a first time visitor I want to be able to find clear instructions easily
+- As a first time visitor I want to be able to play the game quickly
+- As a first time visitor I want to have fun playing the game
+
+ __Returning Visitors__
+ - As a returning visitor I want to be able to play the game instantly
+
+ 

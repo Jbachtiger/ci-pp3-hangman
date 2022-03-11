@@ -75,5 +75,9 @@ __First Time Visitor Goals__
 
 ### Flowchart
 
+## Features 
 
+### Future Development
+- Add a scoring system where players get points for each letter they get right, this would be achived by adding a score variable and incrementing the score each time a letter is correct
+- Create a leaderboard display for the players to display there high scores, this would be achieved by using a Google API to link to a Google Sheet where the player names and scores are stored
 

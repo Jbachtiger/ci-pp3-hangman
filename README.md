@@ -103,6 +103,30 @@ __First Time Visitor Goals__
 
   - [sys](https://docs.python.org/3/library/sys.html?highlight=sys#module-sys) >> The sys library was imported to use the sys.exit method to allow the user to exit the game
 
+## Testing
+This project has been manually tested by doing the following:
+- Passed the code through the PEP8 linter and confirmed that there were no issues
+- Tested all functionality of the game, ensuring all valid and invalid inputs work e.g. out of bounds inputs, entering nothing, muliple inputs of the same letters
+- Thorough manual tesing in my local terminal and the Code Institute Heroku terminal
+
+### PEP8 Linter Results
+See below results for the PEP8 linter validation test. No syntax errors/warnings were found in the code.
+
+![PEP8 Linter Results](docs/testing-and-validation/pep8-linter.png)
+
+### Solved Bugs
+1. Indentation Errors - a couple times throughout the project I was getting an indentation error due to my lines of code not following the correct indentation procedue. I fixed this by going through the problem code line by line ensuring all the code was following the correct indentation rules
+
+2. Empty spaces, numbers and multiple letters counting as a guess - this issue was solved by refactoring the guess input into a take_guess_input function which has a while loop and if statement to validate the data before input is accepted. [Link to commit](https://github.com/Jbachtiger/ci-pp3-hangman/commit/618065e7f02d53ebc83d7af0aa3af7ec3b1d5c92)
+
+### Known Bugs
+There are no known bugs left in this project.
+
+
+
+
+
+
 
 
 

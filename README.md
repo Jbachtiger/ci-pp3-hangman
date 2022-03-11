@@ -1,31 +1,40 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# PP3 - Python Essentials - Hangman
 
-Welcome Jbachtiger,
+Hangman is an interactive python terminal word guessing game. It's target audience is students 15 years and above as well as adults. It's a fun and challening game which helps improve spelling and problem solving. It's purpose is to be an easily accessible and modern way to play a game that traditionally was only played using pen and paper. The game has 2 modes, easy and hard depedning on how ambitious the player feels.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+![Responsive Mockup]()
 
-## Reminders
+## Live Site
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+[Click here to play Hangman]()
 
-## Creating the Heroku app
+## Table of Contents
+- [User Experience (UX)](#user-experience)
+  - [User Stories](#user-stories)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+- [Design](#design)
+  - [Colour Scheme](#colour-scheme)
+  - [Typography](#typography)
+  - [Wireframes](#wireframes)
 
-1. `heroku/python`
-2. `heroku/nodejs`
+- [Features](#features)
+  - [Future Development](#future-development)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+- [Technologies Used](#technologies-used)
+  - [Languages Used](#languages-used)
+  - [Frameworks, Libaries and Programs Used](#frameworks-libaries-and-programs-used)
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+- [Testing](#testing)
+  - [Browser and Device Testing](#browser-and-device-testing)
+  - [W3C and JSHint Validators](#w3c-and-jshint-validators)
+  - [Colour Contrast Checks](#colour-contrast-checks)
+  - [Lighthouse Tool](#lighthouse-tool)
+  - [Solved Bugs](#solved-bugs)
+  - [Known Bugs](#known-bugs)
 
-Connect your GitHub repository and deploy as normal.
+- [Deployment](#deployment)
 
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+- [Credits](#credits)
+  - [Code](#code)
+  - [Media](#media)
+  - [Acknowledgments](#acknowledgments)

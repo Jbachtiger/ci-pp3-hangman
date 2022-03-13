@@ -118,10 +118,17 @@ def take_guess_input():
     If nothing is inputted an error message shows
     """
     guess = ''
-    while not guess.isalpha() and len(guess) != 1:
-        guess = input(Fore.CYAN + "Enter your letter guess: \n").upper()
-        if guess == '':
-            print(Fore.RED + "Enter a valid letter.\n")
+    while True:
+        try:
+            guess = input(Fore.CYAN + "Enter your letter guess: \n").upper()
+            if guess.isdigit():
+                print(Fore.RED + 'Invalid. Only enter letters please.')
+            elif len(guess) == 1:
+                break
+            else:
+                print(Fore.RED + "Invalid. Only enter a single letter please.")
+        except ValueError:
+            print(Fore.RED + " Please enter a valid input.")
     return guess
 
 

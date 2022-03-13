@@ -93,7 +93,8 @@ __First Time Visitor Goals__
 - [Techsini](http://techsini.com/multi-mockup/index.php) - was used to generate multi-device website mockups
 - [Fireshot](https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg?hl=en) - this was a Google chrome extension used to take screenshots
 - [PEP8 Online](http://pep8online.com/) - was used to validate python code to ensure no errors were present
-- [Heroku] - (https://www.heroku.com/) - this was the platform used to deploy the application
+- [Heroku](https://www.heroku.com/) - this was the platform used to deploy the application
+- [Patorjk.com](https://patorjk.com/software/taag/#p=display&f=Rectangles&t=Welcome%20to%20Hangman) - ASCII code generator
 - Python Packages: 
   - [colorama](https://pypi.org/project/colorama/) >> This import allowed the terminal text to be printed in different colours
 
@@ -142,6 +143,25 @@ This application has been deployed using Heroku by following these steps:
 14. Scroll down to the "Connet to GitHub" section and search for the depository name you wish to delpoy. Do this by typing in the depository name and click the "Search button
 15. Once the depository has been found, connect it by clicking the "Connect" button next to it's name
 16. Choose "Automatic deploys" or "Manual deploys" to deploy your application
+
+## Credits
+### Code
+- [DelftStack](https://www.delftstack.com/howto/python/python-clear-console/) - this website provided the neccessary information and code snippet to create a clear terminal function
+- [MJ Codes](https://www.youtube.com/watch?v=wmSysRui0cI&ab_channel=MJCodes) - the base logic of the start_game() function was amended from this Youtube tutorial. The code has been extensively modified and extra features/components added to it
+
+### Media
+- The ASCII art code for the different hangman stages were taken from [here](https://github.com/mj-linane/cs4all-python-student-templates/blob/master/hangman-art.py)
+- The ASCII header code uses the Rectangles font and was taken from [Patorjk.com](https://patorjk.com/software/taag/#p=display&f=Rectangles&t=Welcome%20to%20Hangman)
+
+### Resources
+- [Python.org](https://www.python.org/) - was used to broaden knowledge of language and troubleshoot issues
+- [PyPi.org](https://pypi.org/project/colorama/) - was used to understand how to use the colorama api to print coloured terminal text
+- [StackOverflow](https://stackoverflow.com/) - was used to broaden knowledge to trooubleshoot issues
+- [Kylie Ying Youtube Tutorial](https://www.youtube.com/watch?v=8ext9G7xspg&t=1465s&ab_channel=freeCodeCamp.org) - this Youtube tutorial was used for inspiration and was part of my orignal research into Hangman games
+
+### Acknowledgments
+- My mentor for their support, advice and patience when reviewing this project with me
+- My partner, for being so supportive and patient with me throughout this project and helping me test it
 
 
 

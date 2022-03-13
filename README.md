@@ -2,8 +2,6 @@
 
 Hangman is an interactive python terminal word guessing game. It's target audience is students 15 years and above as well as adults. It's a fun and challening game which helps improve spelling and problem solving. It's purpose is to be an easily accessible and modern way to play a game that traditionally was only played using pen and paper. The game has 2 modes, easy and hard depedning on how ambitious the player feels.
 
-![Responsive Mockup]()
-
 ## Live Site
 
 [Click here to play Hangman]()

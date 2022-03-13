@@ -122,6 +122,28 @@ See below results for the PEP8 linter validation test. No syntax errors/warnings
 ### Known Bugs
 There are no known bugs left in this project.
 
+## Deployment
+
+This application has been deployed using Heroku by following these steps:
+
+1. Commit all changes and push them to GitHub
+2. Log in to [Heroku](https://www.heroku.com/) or create a new account
+3. From the Heroku dashboard click the "Create New App" button
+4. Enter the name of your app and the region your located in. Then click "Create App". It is worth noting that your app name must be unique for Heroku to accept it
+5. The next section is the deployment section for the app. Click on the "Settings" tab and scroll down to config vars
+6. Click on "Reveals Config Vars" and add the KEY: CREDS and the VALUE stored in creds.json file if needed
+7. Add the Config Var, KEY: PORT and VALUE: 8000
+8. Next, go to the buildpacks section by scrolling down the page and click "Add Buildpack"
+9. Select "Python" and click "Save Changes"
+10. Repeat step 8, this time select "Nodejs" and click "Save Changes"
+11. Please ensure your buildpacks have been selected in the above order, python on top and nodejs below
+12. Go to the "Deploy" tab and scroll down to the "Deployment Method" section
+13. Select "GitHub" as the method and click "Connect to GitHub"
+14. Scroll down to the "Connet to GitHub" section and search for the depository name you wish to delpoy. Do this by typing in the depository name and click the "Search button
+15. Once the depository has been found, connect it by clicking the "Connect" button next to it's name
+16. Choose "Automatic deploys" or "Manual deploys" to deploy your application
+
+
 
 
 

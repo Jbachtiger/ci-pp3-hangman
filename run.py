@@ -219,11 +219,18 @@ def ask_to_play_again():
             print(Fore.RED + "Invalid input.")
 
 
+def welcome_msg():
+    """
+    Prints off welcome message
+    """
+    print(Fore.MAGENTA + hangman_logo[0])  # Welcome message
+
+
 def main():
     """
     Run all game functions
     """
-    print(Fore.MAGENTA + hangman_logo[0])  # Welcome message
+    welcome_msg()
     take_player_name_input()
     show_menu()
 

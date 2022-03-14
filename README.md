@@ -4,7 +4,7 @@ Hangman is an interactive python terminal word guessing game. It's target audien
 
 ## Live Site
 
-[Click here to play Hangman]()
+[Click here to play Hangman](https://jbachtiger-ci-pp3-hangman.herokuapp.com/)
 
 ## Table of Contents
 - [User Experience (UX)](#user-experience)

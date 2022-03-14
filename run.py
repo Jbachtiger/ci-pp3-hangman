@@ -2,7 +2,6 @@
 import random
 import os
 import sys
-import colorama
 from colorama import Fore
 
 # Import statements I created for the game
@@ -81,8 +80,10 @@ def select_random_word():
         difficulty = input(Fore.CYAN + "Enter 1 for Easy and 2 for Hard: \n")
 
         if difficulty == "1":
+            clear_console()
             return random.choice(easy_words)
         elif difficulty == "2":
+            clear_console()
             return random.choice(hard_words)
         else:
             print(Fore.RED + "Invalid option. Please select your difficulty.")
@@ -101,7 +102,7 @@ def instructions():
     print("6. Incorrect guesses make a different part of the hangman show.\n")
     print("7. Once the full hangman appears it's GAMEOVER!\n")
 
-# Option to return to main menu
+    # Option to return to main menu
     while True:
         back = input(Fore.CYAN + "Enter 0 to return to main menu: \n")
         if back == "0":
@@ -152,32 +153,32 @@ def start_game():
     #  number of attempts shown in text format
     lives = 6
 
-#  Loop allowing player to guess the correct word on last chance
-#  Exit loop if correct word has been guessed
+    #  Loop allowing player to guess the correct word on last chance
+    #  Exit loop if correct word has been guessed
     while wrong_guesses < max_wrong_attempts_allowed and current_guess != word:
         print(Fore.MAGENTA + hangman_pics[wrong_guesses])
         print(Fore.GREEN + "Attempts left: ", lives)
         print(Fore.CYAN + "Used letters: ", ' '.join(used_letters))
         print(Fore.CYAN + "Correctly guessed letters: ", current_guess)
 
-#  Allows player to enter letter guess
+        #  Allows player to enter letter guess
         guessed_letter = take_guess_input()
         clear_console()
 
-#  Checks to see if the letter has already been used
+        #  Checks to see if the letter has already been used
         while guessed_letter in used_letters:
             print(Fore.RED + "Letter has already been used", guessed_letter)
             guessed_letter = take_guess_input()
 
-# add guessed letter to used_letters list
+        # add guessed letter to used_letters list
         used_letters.append(guessed_letter)
 
-# check guess
+        # check guess
         if guessed_letter in word:
             print(Fore.GREEN + "That's a correct letter!")
 
-#  Updates secret word revealing correct letters
-#  Adds these to a new word with mixed dashes and letters
+            #  Updates secret word revealing correct letters
+            #  Adds these to a new word with mixed dashes and letters
             new_current_guess = ""
             for letter in range(len(word)):
                 if guessed_letter == word[letter]:
@@ -190,7 +191,7 @@ def start_game():
             wrong_guesses += 1  # increases number incorrect by 1
             lives -= 1  # decreases number of lives by 1
 
-#  No more guesses left
+    #  No more guesses left
     if wrong_guesses == max_wrong_attempts_allowed:
         print(hangman_pics[wrong_guesses])
         print(Fore.GREEN + "Attempts left:", lives)

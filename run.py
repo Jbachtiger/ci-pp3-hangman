@@ -62,6 +62,7 @@ def show_menu():
         if player_option == "1":
             return start_game()
         elif player_option == "2":
+            clear_console()
             return instructions()
         elif player_option == "0":
             print("Thanks for playing, game exited.")
@@ -93,7 +94,7 @@ def instructions():
     """
     Hangman game instructions
     """
-    print("How to play:\n")
+    print(Fore.BLUE + "How to play:\n")
     print("1. The aim of the game is to correctly guess the secret word.\n")
     print("2. You have 6 chances to guess the correct word.\n")
     print("3. To guess a letter, type in the letter and hit enter.\n")
@@ -157,9 +158,11 @@ def start_game():
     #  Exit loop if correct word has been guessed
     while wrong_guesses < max_wrong_attempts_allowed and current_guess != word:
         print(Fore.MAGENTA + hangman_pics[wrong_guesses])
-        print(Fore.GREEN + "Attempts left: ", lives)
-        print(Fore.CYAN + "Used letters: ", ' '.join(used_letters))
-        print(Fore.CYAN + "Correctly guessed letters: ", current_guess)
+        print("\n")
+        print(Fore.BLUE + "Attempts left: ", lives)
+        print(Fore.BLUE + "Used letters: ", ' '.join(used_letters))
+        print(Fore.GREEN + "Correctly guessed letters: ", current_guess)
+        print("\n")
 
         #  Allows player to enter letter guess
         guessed_letter = take_guess_input()
@@ -194,9 +197,11 @@ def start_game():
     #  No more guesses left
     if wrong_guesses == max_wrong_attempts_allowed:
         print(hangman_pics[wrong_guesses])
-        print(Fore.GREEN + "Attempts left:", lives)
-        print(Fore.RED + "You've been hanged")
-        print(Fore.CYAN + "The correct word is", word)
+        print(Fore.RED + "You've been hanged!")
+        print("\n")
+        print(Fore.BLUE + "Attempts left:", lives)
+        print(Fore.GREEN + "The correct word is", word)
+        print("\n")
         ask_to_play_again()
     else:
         print(Fore.GREEN + "You have won!")
@@ -214,6 +219,7 @@ def ask_to_play_again():
         if restart == "1":
             start_game()
         elif restart == "2":
+            clear_console()
             show_menu()
         else:
             print(Fore.RED + "Invalid input.")

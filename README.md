@@ -72,7 +72,7 @@ __First Time Visitor Goals__
 - The main colours used in the game are magenta, cyan, green and red.
 
 ### Flowchart
-
+![Hangman Flowchart](docs/flowcharts/hangman-flowchart.png)
 ## Features 
 
 ### Future Development
@@ -93,6 +93,7 @@ __First Time Visitor Goals__
 - [PEP8 Online](http://pep8online.com/) - was used to validate python code to ensure no errors were present
 - [Heroku](https://www.heroku.com/) - this was the platform used to deploy the application
 - [Patorjk.com](https://patorjk.com/software/taag/#p=display&f=Rectangles&t=Welcome%20to%20Hangman) - ASCII code generator
+- [Lucidchart](https://www.lucidchart.com/pages/) - this program was used to create the flowchart which maps out the logic for this hangman project
 - Python Packages: 
   - [colorama](https://pypi.org/project/colorama/) >> This import allowed the terminal text to be printed in different colours
 

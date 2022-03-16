@@ -121,6 +121,7 @@ __First Time Visitor Goals__
  - __Start Game and Difficulty Option__
    - Once the start game option is entered, the player is asked what difficulty they wish to play
    - There are two levels, easy or hard which also has validation to feedback to the player if an incorrect command is entered
+   - The difference in difficulty is the word length that will be returned, easy words have 4 letters where as hard words have upto 6 letters
    - Once the difficulty is chosen the main game starts
    - The way each step has been designed means that the player is directed for each stage of setting up the game and prompted with feedback if they make a mistake
 

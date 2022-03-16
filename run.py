@@ -1,3 +1,6 @@
+"""
+Imports
+"""
 # External imports
 import random
 import os
@@ -201,6 +204,7 @@ def start_game():
         ask_to_play_again()
     else:
         print(Fore.GREEN + "You have won!")
+        print("\n")
         ask_to_play_again()
 
 

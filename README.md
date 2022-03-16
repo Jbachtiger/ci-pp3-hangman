@@ -176,6 +176,10 @@ __First Time Visitor Goals__
   - The colours also have meanings behind them such as green for correct answers and red for incorrect/invalid inputs
   - The purpose of these is to inform the player quickly what might be happening without even having to read all the text
 
+- __Clear Terminal__
+  - Function created to clear the terminal
+  - Makes it easier for the user to see what's going on with the Hangman game by removing redundant output on new option selections
+
 ### Future Development
 - Add a scoring system where players get points for each letter they get right, this would be achieved by adding a score variable and incrementing the score each time a letter is correct
 - Create a leaderboard display for the players to display their high scores, this would be achieved by using a Google API to link to a Google Sheet where the player names and scores are stored
@@ -235,6 +239,10 @@ Lighthouse was used to test Performance, Best Practices, Accessibility and SEO o
 1. Indentation Errors - a couple of times throughout the project I was getting an indentation error due to my lines of code not following the correct indentation procedure. I fixed this by going through the problem code line by line ensuring all the code was following the correct indentation rules
 
 2. Empty spaces, numbers and multiple letters counting as a guess - this issue was solved by amending and adding to the existing code in the take_guess_input function. The logic of the while loop was changed and exception errors were used to handle the input validation. Rather than using the isalpha() method the isdigit() method was used to ensure no numbers were inputted. The guess length code was kept the same but added into the elif statement rather than as the original while loop condition. [Link to commit](https://github.com/Jbachtiger/ci-pp3-hangman/commit/51ae5b9a8bd92f1ca2f6fcd43c713dcdafd9e43d)
+
+3. Terminal not clearing correctly - my original clear terminal code wasn't fully clearing all of the outputs in my terminal, mainly the ASCII art welcome to text. After further investigation with a joint effort from Tutor Support and myself it was decided that the issue was probably to do with a peculiarity of the CI template that's required to run the terminal in Heroku. As a workaround, I amended the code in my clear_console function to an alternative method which seems to have done the trick. [Link to commit](https://github.com/Jbachtiger/ci-pp3-hangman/commit/3b503a5a6e594f664545679a09cb2c589de48ac5)
+
+4. The menu text colour turning white when choosing not to play the game again - to fix this issues I added the colorama code Fore.CYAN directly to each of the menu print statements.  
 
 ### Known Bugs
 There are no known bugs left in this project.

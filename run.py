@@ -9,20 +9,10 @@ from words import easy_words, hard_words
 from hangman_art import hangman_pics, hangman_logo
 
 
-# def clear_console():
-#     """
-#     Clears the terminal
-#     Credit - clear console code used from
-#     https://www.delftstack.com/howto/python/python-clear-console/
-#     """
-#     command = 'clear'
-#     if os.name in ('nt', 'dos'):
-#         command = 'cls'
-#     os.system(command)
-
 def clear_console():
     """
-    Clears terminal
+    Clears the terminal
+    Credit - Code Institute Tutor Support
     """
     os.system('printf "\ec"')
 

@@ -48,10 +48,10 @@ def show_menu():
     """
     Main menu for game
     """
-    print("Main Menu: ")
-    print("[1] Start Game")
-    print("[2] Instructions")
-    print("[0] Exit the game")
+    print(Fore.CYAN + "Main Menu: ")
+    print(Fore.CYAN + "[1] Start Game")
+    print(Fore.CYAN + "[2] Instructions")
+    print(Fore.CYAN + "[0] Exit the game")
 
     while True:
         player_option = input(Fore.CYAN + "Enter option from menu: \n")

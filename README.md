@@ -243,7 +243,7 @@ Lighthouse was used to test Performance, Best Practices, Accessibility and SEO o
 
 3. Terminal not clearing correctly - my original clear terminal code wasn't fully clearing all of the outputs in my terminal, mainly the ASCII art welcome to text. After further investigation with a joint effort from Tutor Support and myself it was decided that the issue was probably to do with a peculiarity of the CI template that's required to run the terminal in Heroku. As a workaround, I amended the code in my clear_console function to an alternative method which seems to have done the trick. [Link to commit](https://github.com/Jbachtiger/ci-pp3-hangman/commit/3b503a5a6e594f664545679a09cb2c589de48ac5)
 
-4. The menu text colour turning white when choosing not to play the game again - to fix this issues I added the colorama code Fore.CYAN directly to each of the menu print statements.  
+4. The menu text colour turning white when choosing not to play the game again - to fix this issues I added the colorama code Fore.CYAN directly to each of the menu print statements. [Link to commit](https://github.com/Jbachtiger/ci-pp3-hangman/commit/cd4d1edf1f2ea8583a8219058fd9e6762c672b0b)  
 
 ### Known Bugs
 There are no known bugs left in this project.

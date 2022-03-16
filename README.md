@@ -218,7 +218,7 @@ See below results for the PEP8 linter validation test. No syntax errors/warnings
 ### Solved Bugs
 1. Indentation Errors - a couple of times throughout the project I was getting an indentation error due to my lines of code not following the correct indentation procedure. I fixed this by going through the problem code line by line ensuring all the code was following the correct indentation rules
 
-2. Empty spaces, numbers and multiple letters counting as a guess - this issue was solved by refactoring the guess input into a take_guess_input function which has a while loop and if statement to validate the data before the input is accepted. [Link to commit](https://github.com/Jbachtiger/ci-pp3-hangman/commit/618065e7f02d53ebc83d7af0aa3af7ec3b1d5c92)
+2. Empty spaces, numbers and multiple letters counting as a guess - this issue was solved by amending and adding to the existing code in the take_guess_input function. The logic of the while loop was changed and exception errors were used to handle the input validation. Rather than using the isalpha() method the isdigit() method was used to ensure no numbers were inputted. The guess length code was kept the same but added into the elif statement rather than as the original while loop condition. [Link to commit](https://github.com/Jbachtiger/ci-pp3-hangman/commit/51ae5b9a8bd92f1ca2f6fcd43c713dcdafd9e43d)
 
 ### Known Bugs
 There are no known bugs left in this project.

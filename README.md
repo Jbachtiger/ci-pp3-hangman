@@ -74,6 +74,107 @@ __First Time Visitor Goals__
 ### Flowchart
 ![Hangman Flowchart](docs/flowcharts/hangman-flowchart.png)
 ## Features 
+- __Welcome Screen__
+  - This includes the title to game, with a brief tag line and a hangman image. This title and hangman image are created using ASCII art
+  - The purpose of this section is the introduce the game in a visually appealing way which tells you about the game in as little words as possible which is why the accompanying image is also used
+
+  ![Welcome Screen](docs/features/welcome-screen.png)
+
+- __Enter Your Name__
+  - The user is then prompted to input their name which once entered returns a welcome message and shows the menu
+  - If the user enters an invalid input e.g. empty string an error message is returned
+  - This section provides interactivity by taking the users name and provides a personalised welcome message by returning the name they have enterd in the welcome message
+
+  ![Enter Your Name](docs/features/name-input.png)
+
+  ![Invalid Name Input](docs/features/name-input-error-msg.png)
+
+- __Menu__
+  - The menu has been created to be simple and direct the player to useful options
+  - It clearly informs the player what input returns each option
+  - There are 3 choices, start game, instructions and exit which closes the programme
+  - Validation has been put in place to provide feedback to the user if they input an invalid command
+
+  ![Menu](docs/features/menu.png)
+
+  ![Menu Validation](docs/features/menu-validation.png)
+
+- __Instructions__
+  - This section provides the player with a detialed list of instructions on how to play the hangman game
+  - It's purpose is to help the player understand the game mechanics so they can get the most out of playing the game and enjoy their experience
+  - There is a command to direct the user back to the main menu
+  - Validation has also been added to provide feedback if an invalid input is entered
+
+  ![Instructions](docs/features/instructions.png)
+
+  ![Instructions Validations](docs/features/instructions-validations.png)
+
+- __Exit The Game__
+ - The exit game option, exits the application and ends the game
+ - To be able to start it again the run programme button needs to be entered
+ - This provides the player an option to leave the game should they desire
+ - A thank you message is displayed if this option is chosen to thank the player for playing the game
+
+ ![Exit the game](docs/features/exit.png)
+
+ - __Start Game and Difficulty Option__
+   - Once the start game option is entered, the player is asked what difficulty they wish to play
+   - There are two levels, easy or hard which also has validation to feedback to the player if an incorrect command is entered
+   - Once the difficulty is chosen the main game starts
+   - The way each step has been designed means that the player is directed for each stage of setting up the game and prompted with feedback if they make a mistake
+
+![Difficulty](docs/features/difficulty.png)
+
+![Difficulty Validation](docs/features/difficulty-validation.png)
+
+![Game](docs/features/hangman-game.png)
+
+
+- __Enter Your Guess__
+  - Takes the players letter guess input
+  - If the input is correct then a correct letter message appears and the player is prompted to guess another letter
+  - If the player is incorrect then an attempt is removed, a section of the hangman image appears and the player is prompted to guess again until all attempts have been used up
+  - All letters that have been guess are put into the used letters section
+  - Validation has been put in place to provide feedback to the player if they try to enter an invalid input such as entering nothing, a number, multiple letters or a duplicated letter
+
+  ![Correct Guess](docs/features/correct-guess.png)
+
+  ![Incorrect Guess](docs/features/incorrect-guess.png)
+
+  ![Empty Space Validation](docs/features/empty-space-validation.png)
+
+  ![Number Validation](docs/features/number-validation.png)
+
+  ![Multiple Letters Validation](docs/features/multiple-letter-validation.png)
+
+  ![Repeat Letter Validation](docs/features/duplication-validation.png)
+
+
+- __Win Game__
+  - Once all correct letters have been guessed, the player wins the game and a win game message appears
+  - A play again option is then displayed, if the user plays again they will be asked for their difficulty and the game will start
+  - If they choose to stop playing they will be returned to the main menu
+
+  ![Win Game](docs/features/win-game.png)
+
+
+- __Lose Game__
+  - Once all guess attempts have been used up the hangman image appears, attempts left becomes 0, the correct word is shown and a you lose message appears
+  - A play again option is then displayed, if the user plays again they will be asked for their difficulty and the game will start
+  - If they choose to stop playing they will be returned to the main menu
+
+  ![Game Over](docs/features/gameover.png)
+
+
+-__Validation__
+  - Validation has been added throughout the game to provide players with feedback to prompt them when an incorrect/invalid input has been entered
+  - They also give the player a hint as to why the error has occured
+
+- __Text Colours__
+  - Colours have been used heavily in this game, this is to make it more interactive and engaging 
+  - The colours also have meanings behind them such as green for correct answers and red for incorrect/invalid inputs
+  - The purpose of these are to inform the player quickly what might be happening without even having to read all the text
+
 
 ### Future Development
 - Add a scoring system where players get points for each letter they get right, this would be achived by adding a score variable and incrementing the score each time a letter is correct
@@ -157,6 +258,7 @@ This application has been deployed using Heroku by following these steps:
 - [PyPi.org](https://pypi.org/project/colorama/) - was used to understand how to use the colorama api to print coloured terminal text
 - [StackOverflow](https://stackoverflow.com/) - was used to broaden knowledge to trooubleshoot issues
 - [Kylie Ying Youtube Tutorial](https://www.youtube.com/watch?v=8ext9G7xspg&t=1465s&ab_channel=freeCodeCamp.org) - this Youtube tutorial was used for inspiration and was part of my orignal research into Hangman games
+- Code Institute Tutor Support - I used tutor support a couple times to help me identify and resolve issues with my python code
 
 ### Acknowledgments
 - My mentor for their support, advice and patience when reviewing this project with me

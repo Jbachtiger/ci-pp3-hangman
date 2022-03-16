@@ -18,6 +18,8 @@ Hangman is an interactive python terminal word guessing game. Its target audienc
 - [Features](#features)
   - [Future Development](#future-development)
 
+- [Data Model](#data-model)
+
 - [Technologies Used](#technologies-used)
   - [Languages Used](#languages-used)
   - [Frameworks, Libaries and Programs Used](#frameworks-libaries-and-programs-used)
@@ -175,10 +177,14 @@ __First Time Visitor Goals__
   - The colours also have meanings behind them such as green for correct answers and red for incorrect/invalid inputs
   - The purpose of these is to inform the player quickly what might be happening without even having to read all the text
 
-
 ### Future Development
 - Add a scoring system where players get points for each letter they get right, this would be achieved by adding a score variable and incrementing the score each time a letter is correct
 - Create a leaderboard display for the players to display their high scores, this would be achieved by using a Google API to link to a Google Sheet where the player names and scores are stored
+
+
+## Data Model
+
+The main game loop for my hangman game includes using two while loops, two if/else statements and a for loop within one of these if statements. The first while loop allows the player to guess the letters until they have either run out of attempts or guessed the word. The second while loop checks to make sure the letters aren't being duplicated and used more than once. Then I have used an if statement to check the guess to see if the letter guessed is correct, if so it prints a statement telling the player they have correctly guessed the letter. If the letter is incorrect then it prints a statement telling the player the letter is incorrect and removes a life and shows another part of the hangman image. The for loop within this if statement checks the letters within the word and updates it to reveal any correct letters as well as adding these letters to a new variable for the correctly guessed letters. This then displays the word with mixed letters and dashes depending on how many correct letters have been guessed and revealed. The final if statement runs if all guesses have been used up, printing the full hangman image, corresponding text, attempts left 0, the correct word and the option to play again.
 
 ## Technologies Used
 ### Languages Used

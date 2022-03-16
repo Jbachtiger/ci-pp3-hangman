@@ -2,6 +2,8 @@
 
 Hangman is an interactive python terminal word guessing game. Its target audience is students 15 years and above as well as adults. It's a fun and challenging game which helps improve spelling and problem-solving. Its purpose is to be an easily accessible and modern way to play a game that traditionally was only played using pen and paper. The game has 2 modes, easy and hard depending on how ambitious the player feels.
 
+![Mockup](docs/mockups/mockup.png)
+
 ## Live Site
 
 [Click here to play Hangman](https://jbachtiger-ci-pp3-hangman.herokuapp.com/)
@@ -12,8 +14,7 @@ Hangman is an interactive python terminal word guessing game. Its target audienc
 
 - [Design](#design)
   - [Colour Scheme](#colour-scheme)
-  - [Typography](#typography)
-  - [Wireframes](#wireframes)
+  - [Flowchart](#flowchart)
 
 - [Features](#features)
   - [Future Development](#future-development)
@@ -25,9 +26,7 @@ Hangman is an interactive python terminal word guessing game. Its target audienc
   - [Frameworks, Libaries and Programs Used](#frameworks-libaries-and-programs-used)
 
 - [Testing](#testing)
-  - [Browser and Device Testing](#browser-and-device-testing)
-  - [W3C and JSHint Validators](#w3c-and-jshint-validators)
-  - [Colour Contrast Checks](#colour-contrast-checks)
+  - [PEP8 Linter Results](#pep8-linter-results)
   - [Lighthouse Tool](#lighthouse-tool)
   - [Solved Bugs](#solved-bugs)
   - [Known Bugs](#known-bugs)
@@ -71,7 +70,7 @@ __First Time Visitor Goals__
 - The colour scheme has been carefully chosen to ensure accessibility for all
 - The colours compliment each other to ensure text is easily readable in the python terminal
 - The colours used provide a fun, colourful and engaging interface
-- The main colours used in the game are magenta, cyan, green and red.
+- The main colours used in the game are magenta, cyan, blue, green and red
 
 ### Flowchart
 ![Hangman Flowchart](docs/flowcharts/hangman-flowchart.png)
@@ -112,10 +111,10 @@ __First Time Visitor Goals__
   ![Instructions Validations](docs/features/instructions-validations.png)
 
 - __Exit The Game__
- - The exit game option, exits the application and ends the game
- - To be able to start it again the run programme button needs to be entered
- - This provides the player with an option to leave the game should they desire
- - A thank you message is displayed if this option is chosen to thank the player for playing the game
+  - The exit game option, exits the application and ends the game
+  - To be able to start it again the run programme button needs to be entered
+  - This provides the player with an option to leave the game should they desire
+  - A thank you message is displayed if this option is chosen to thank the player for playing the game
 
  ![Exit the game](docs/features/exit.png)
 
@@ -184,7 +183,12 @@ __First Time Visitor Goals__
 
 ## Data Model
 
-The main game loop for my hangman game includes using two while loops, two if/else statements and a for loop within one of these if statements. The first while loop allows the player to guess the letters until they have either run out of attempts or guessed the word. The second while loop checks to make sure the letters aren't being duplicated and used more than once. Then I have used an if statement to check the guess to see if the letter guessed is correct, if so it prints a statement telling the player they have correctly guessed the letter. If the letter is incorrect then it prints a statement telling the player the letter is incorrect and removes a life and shows another part of the hangman image. The for loop within this if statement checks the letters within the word and updates it to reveal any correct letters as well as adding these letters to a new variable for the correctly guessed letters. This then displays the word with mixed letters and dashes depending on how many correct letters have been guessed and revealed. The final if statement runs if all guesses have been used up, printing the full hangman image, corresponding text, attempts left 0, the correct word and the option to play again.
+- The main game loop for my hangman game includes using two while loops, two if/else statements and a for loop within one of these if statements. 
+- The first while loop allows the player to guess the letters until they have either run out of attempts or guessed the word. 
+- The second while loop checks to make sure the letters aren't being duplicated and used more than once. 
+- Then I have used an if statement to check the guess to see if the letter guessed is correct, if so it prints a statement telling the player they have correctly guessed the letter. If the letter is incorrect then it prints a statement telling the player the letter is incorrect and removes a life and shows another part of the hangman image. 
+- The for loop within this if statement checks the letters within the word and updates it to reveal any correct letters as well as adding these letters to a new variable for the correctly guessed letters. This then displays the word with mixed letters and dashes depending on how many correct letters have been guessed and revealed. 
+- The final if statement runs if all guesses have been used up, printing the full hangman image, corresponding text, attempts left 0, the correct word and the option to play again.
 
 ## Technologies Used
 ### Languages Used
@@ -213,13 +217,19 @@ The main game loop for my hangman game includes using two while loops, two if/el
 ## Testing
 This project has been manually tested by doing the following:
 - Passed the code through the PEP8 linter and confirmed that there were no issues
-- Tested all functionality of the game, ensuring all valid and invalid inputs work e.g. out of bounds inputs, entering nothing, multiple inputs of the same letters
+- Tested all functionality of the game, that the terminal clears properly, ensuring all valid and invalid inputs work e.g. entering nothing, multiple inputs of the same letters, out of bound inputs
 - Thorough manual testing in my local terminal and the Code Institute Heroku terminal
 
 ### PEP8 Linter Results
 See below results for the PEP8 linter validation test. No syntax errors/warnings were found in the code.
 
 ![PEP8 Linter Results](docs/testing-and-validation/pep8-linter.png)
+
+### Lighthouse Tool
+
+Lighthouse was used to test Performance, Best Practices, Accessibility and SEO on the Desktop. The results are within acceptable ranges.
+
+![Lighthouse Test Results](docs/testing-and-validation/lighthouse-testing.png)
 
 ### Solved Bugs
 1. Indentation Errors - a couple of times throughout the project I was getting an indentation error due to my lines of code not following the correct indentation procedure. I fixed this by going through the problem code line by line ensuring all the code was following the correct indentation rules

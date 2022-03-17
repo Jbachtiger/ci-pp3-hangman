@@ -23,7 +23,7 @@ Hangman is an interactive python terminal word guessing game. Its target audienc
 
 - [Technologies Used](#technologies-used)
   - [Languages Used](#languages-used)
-  - [Frameworks, Libaries and Programs Used](#frameworks-libaries-and-programs-used)
+  - [Frameworks, Libaries and Programs Used](#frameworks-libraries-and-programs-used)
 
 - [Testing](#testing)
   - [PEP8 Linter Results](#pep8-linter-results)
@@ -36,6 +36,7 @@ Hangman is an interactive python terminal word guessing game. Its target audienc
 - [Credits](#credits)
   - [Code](#code)
   - [Media](#media)
+  - [Resources](#resources)
   - [Acknowledgments](#acknowledgments)
 
 ## User Experience
@@ -45,6 +46,10 @@ __Project Goals__
 - Teach players new words
 - Improve players' problem-solving ability
 - To be fun and make players want to play again
+- To be programmatically error free
+- To provide a varied selection of words and difficulty
+- To handle all user input errors appropriately
+- To provide clear instructions for valid inputs
 
 __Business Owner Goals__
 - As a site owner I want to create a fun and engaging game

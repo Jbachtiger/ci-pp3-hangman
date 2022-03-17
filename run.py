@@ -116,7 +116,8 @@ def take_guess_input():
     """
     Function that takes guess input and validates
     to ensure only 1 letter is inputted at a time
-    If nothing is inputted an error message shows
+    If nothing, a number or more than 1 letter is
+    inputted an error message shows
     """
     guess = ''
     while True:
